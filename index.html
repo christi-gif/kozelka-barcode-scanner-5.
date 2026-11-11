@@ -75,10 +75,19 @@
         await scanner.start(
           { facingMode: "environment" },
           {
-            fps: 10,
-            qrbox: { width: 280, height: 140 },
-            aspectRatio: 1.5
-          },
+  fps: 15,
+  qrbox: { width: 320, height: 200 },
+  aspectRatio: 1.5,
+  formatsToSupport: [
+    Html5QrcodeSupportedFormats.UPC_A,
+    Html5QrcodeSupportedFormats.UPC_E,
+    Html5QrcodeSupportedFormats.EAN_13,
+    Html5QrcodeSupportedFormats.EAN_8,
+    Html5QrcodeSupportedFormats.CODE_128,
+    Html5QrcodeSupportedFormats.CODE_39,
+    Html5QrcodeSupportedFormats.ITF
+  ]
+},
           function(decodedText) {
             if (scanComplete) return;
             scanComplete = true;
