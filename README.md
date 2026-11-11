@@ -1,0 +1,1 @@
+# kozelka-barcode-scanner-5.
